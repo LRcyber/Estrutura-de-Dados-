@@ -1,0 +1,60 @@
+#include<stdio.h>
+#define MAX 10
+
+void QUEUE_STORE (int);//prototipo funçao enfilera
+int QUEUE_RETRIVE ();//prototipo funçao desenfilera
+
+ int main(void){
+     int fim=0;
+     int inicio=0;
+     int iten=0;
+
+
+QUEUE_STORE (10);
+QUEUE_STORE (20);
+QUEUE_STORE (30);
+QUEUE_STORE (40);
+QUEUE_STORE (50);
+QUEUE_STORE (60);
+QUEUE_STORE (70);
+QUEUE_STORE (80);
+QUEUE_STORE (90);
+QUEUE_STORE (100);
+QUEUE_STORE (60);
+QUEUE_RETRIVE ();
+QUEUE_RETRIVE ();
+QUEUE_RETRIVE ();
+QUEUE_RETRIVE ();
+QUEUE_RETRIVE ();
+
+
+
+
+
+ return 0;}
+
+void QUEUE_STORE (int iten){
+int fila[MAX];
+int fim;
+int inicio;
+
+if (fim==MAX){
+        printf ("Fila cheia\n");
+}else{
+     fila [fim]= iten;//adiciona um elemento no final da fila
+     fim++; //incrementa o indice do fim
+     printf("ENFILEIRANDO %d\n", iten);
+     }
+     }
+int QUEUE_RETRIVE (){
+int fila[MAX];
+int fim;
+int inicio;
+if (inicio==fim){
+        printf("A fila esta vazia!!\n");
+
+}else{
+    inicio++;
+    printf("DESENFILEIRANDO %d \n", fila[inicio-1]);
+}
+}
