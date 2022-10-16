@@ -1,0 +1,51 @@
+#include<stdio.h>
+#define MAX 5
+
+//FILA CIRCULAR
+void QUEUE_STORE (int);//prototipo funçao enfilera
+int QUEUE_RETRIVE ();//prototipo funçao desenfilera
+
+
+int main (void){
+
+
+QUEUE_STORE (10);
+QUEUE_STORE (20);
+QUEUE_STORE (30);
+QUEUE_STORE (40);
+QUEUE_STORE (50);
+QUEUE_STORE (60);
+
+QUEUE_RETRIVE ();
+QUEUE_STORE (60);
+
+
+return 0;}
+
+void QUEUE_STORE (int iten){
+int fim, inicio;
+int fila[MAX];
+    if (fim+1==inicio || (fim +1 == MAX && !inicio)){
+        printf("Fila cheia!!\n");
+    }else{
+    fila[fim]= iten;
+    fim++;
+    printf("Enfileirando: %d\n", iten);
+    }
+    if(fim==MAX){
+        fim=0;
+        printf("Enfileirando: %d\n", iten);
+    }
+}
+int QUEUE_RETRIVE (){
+int fim, inicio;
+int fila[MAX];
+
+if (inicio==MAX){
+    inicio=0;
+    }//reinicia fila
+    if (inicio==fim){
+        printf("A Fila esta vazia!");
+    }
+}
+
